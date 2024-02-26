@@ -1,14 +1,14 @@
-import path from 'path';
-import { buildConfig } from 'payload/config';
-import { postgresAdapter } from '@payloadcms/db-postgres';
-import { slateEditor } from '@payloadcms/richtext-slate';
-import { webpackBundler } from '@payloadcms/bundler-webpack';
+import path from "path";
+import { webpackBundler } from "@payloadcms/bundler-webpack";
+import { postgresAdapter } from "@payloadcms/db-postgres";
+import { slateEditor } from "@payloadcms/richtext-slate";
+import { buildConfig } from "payload/config";
 
 export default buildConfig({
   db: postgresAdapter({
-	pool: {
-		connectionString: process.env.POSTGRES_DB_URI,
-	}
+    pool: {
+      connectionString: process.env.POSTGRES_DB_URI,
+    },
   }),
   editor: slateEditor({}),
   admin: {
@@ -21,6 +21,6 @@ export default buildConfig({
     // Your globals here
   ],
   typescript: {
-    outputFile: path.resolve(__dirname, '../payload-types.ts'),
+    outputFile: path.resolve(__dirname, "../payload-types.ts"),
   },
 });
