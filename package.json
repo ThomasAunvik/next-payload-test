@@ -11,7 +11,7 @@
   "dependencies": {
     "@biomejs/biome": "1.5.3-nightly.69f9031",
     "@payloadcms/bundler-webpack": "^1.0.6",
-    "@payloadcms/db-postgres": "^0.7.0",
+    "@payloadcms/db-postgres": "0.1.0-beta.19",
     "@payloadcms/next-payload": "^0.1.11",
     "@payloadcms/richtext-slate": "^1.4.0",
     "next": "13.5.6",
